@@ -1,0 +1,1 @@
+global.spr_lita = [spr_regador,spr_arado];
