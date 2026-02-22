@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_vaso_grande",
+  "%Name":"obj_agua",
   "eventList":[],
   "managed":true,
-  "name":"obj_vaso_grande",
+  "name":"obj_agua",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_planta_normal",
-    "path":"folders/objetos/obj_planta_normal.yy",
+    "name":"obj_recursos",
+    "path":"folders/objetos/obj_recursos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_vaso_grande",
-    "path":"sprites/spr_vaso_grande/spr_vaso_grande.yy",
+    "name":"spr_agua",
+    "path":"sprites/spr_agua/spr_agua.yy",
   },
   "spriteMaskId":null,
   "visible":true,

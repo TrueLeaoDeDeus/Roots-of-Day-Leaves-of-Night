@@ -6,8 +6,8 @@
   "name":"obj_planta",
   "overriddenProperties":[],
   "parent":{
-    "name":"objetos",
-    "path":"folders/objetos.yy",
+    "name":"obj_planta_normal",
+    "path":"folders/objetos/obj_planta_normal.yy",
   },
   "parentObjectId":null,
   "persistent":false,

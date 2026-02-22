@@ -9,8 +9,8 @@
   "name":"obj_itens",
   "overriddenProperties":[],
   "parent":{
-    "name":"objetos",
-    "path":"folders/objetos.yy",
+    "name":"obj_not_sprite",
+    "path":"folders/objetos/obj_not_sprite.yy",
   },
   "parentObjectId":null,
   "persistent":false,

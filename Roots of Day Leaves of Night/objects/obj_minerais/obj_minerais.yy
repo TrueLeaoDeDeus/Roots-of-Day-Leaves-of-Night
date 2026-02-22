@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_vaso_grande",
+  "%Name":"obj_minerais",
   "eventList":[],
   "managed":true,
-  "name":"obj_vaso_grande",
+  "name":"obj_minerais",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_planta_normal",
-    "path":"folders/objetos/obj_planta_normal.yy",
+    "name":"obj_recursos",
+    "path":"folders/objetos/obj_recursos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_vaso_grande",
-    "path":"sprites/spr_vaso_grande/spr_vaso_grande.yy",
+    "name":"spr_minerais",
+    "path":"sprites/spr_minerais/spr_minerais.yy",
   },
   "spriteMaskId":null,
   "visible":true,

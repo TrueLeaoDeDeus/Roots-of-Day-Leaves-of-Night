@@ -1,13 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_vaso_grande",
+  "%Name":"obj_cabeca_planta_sol",
   "eventList":[],
   "managed":true,
-  "name":"obj_vaso_grande",
+  "name":"obj_cabeca_planta_sol",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_planta_normal",
-    "path":"folders/objetos/obj_planta_normal.yy",
+    "name":"obj_mecanicas",
+    "path":"folders/objetos/obj_mecanicas.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_vaso_grande",
-    "path":"sprites/spr_vaso_grande/spr_vaso_grande.yy",
+    "name":"spr_cabeca_planta_sol",
+    "path":"sprites/spr_cabeca_planta_sol/spr_cabeca_planta_sol.yy",
   },
   "spriteMaskId":null,
   "visible":true,

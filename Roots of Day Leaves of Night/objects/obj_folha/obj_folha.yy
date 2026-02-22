@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_vaso_grande",
-  "eventList":[],
+  "%Name":"obj_folha",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_vaso_grande",
+  "name":"obj_folha",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_planta_normal",
-    "path":"folders/objetos/obj_planta_normal.yy",
+    "name":"obj_mecanicas",
+    "path":"folders/objetos/obj_mecanicas.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_vaso_grande",
-    "path":"sprites/spr_vaso_grande/spr_vaso_grande.yy",
+    "name":"spr_folha",
+    "path":"sprites/spr_folha/spr_folha.yy",
   },
   "spriteMaskId":null,
   "visible":true,
