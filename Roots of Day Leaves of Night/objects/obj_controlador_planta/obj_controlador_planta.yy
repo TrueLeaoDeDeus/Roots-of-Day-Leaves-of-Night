@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_sol",
-  "eventList":[],
+  "%Name":"obj_controlador_planta",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_sol",
+  "name":"obj_controlador_planta",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_recursos",
-    "path":"folders/objetos/obj_recursos.yy",
+    "name":"obj_not_sprite",
+    "path":"folders/objetos/obj_not_sprite.yy",
   },
-  "parentObjectId":{
-    "name":"obj_minerais",
-    "path":"objects/obj_minerais/obj_minerais.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,10 +30,7 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_sol",
-    "path":"sprites/spr_sol/spr_sol.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
   "visible":true,
 }

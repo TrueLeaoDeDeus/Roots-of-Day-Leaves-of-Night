@@ -14,7 +14,7 @@ _item.sprite_index = spr_regador;
 
 mover = function()
 {
-	lista_colisoes = [obj_vaso,obj_planta];
+	lista_colisoes = [obj_vaso,obj_planta,obj_limitador];
 	
 	var _left	= keyboard_check(ord("A"));
 	var _right	= keyboard_check(ord("D"));

@@ -1,4 +1,4 @@
-tempo   = 400;
+tempo   = 600;
 
 valanso = 2;
 

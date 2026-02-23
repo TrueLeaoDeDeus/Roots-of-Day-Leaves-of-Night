@@ -23,7 +23,7 @@
   ],
   "name":"spr_tronco",
   "nineSlice":null,
-  "origin":4,
+  "origin":7,
   "parent":{
     "name":"mecanicas_plantas",
     "path":"folders/sprites/mecanicas_plantas.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":96,
-    "yorigin":96,
+    "yorigin":192,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

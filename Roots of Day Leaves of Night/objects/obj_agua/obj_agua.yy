@@ -9,7 +9,10 @@
     "name":"obj_recursos",
     "path":"folders/objetos/obj_recursos.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_minerais",
+    "path":"objects/obj_minerais/obj_minerais.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
