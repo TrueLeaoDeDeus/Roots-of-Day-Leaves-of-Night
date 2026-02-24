@@ -1,29 +1,29 @@
+// Localizando o tronco.
+
+
+
 
 // Creando os objetos.
 
-
-
 instance_create_layer(room_width/2,room_height,layer,obj_vaso_grande);
 
-instance_create_depth(room_width/2,room_height-112,-1,obj_tronco);
+instance_create_layer(room_width/2,room_height-112,"tronco",obj_tronco);
 
-instance_create_depth(room_width/2,room_height-120,-1,obj_rama);
+instance_create_layer(obj_tronco.x+global.tronco_tamanhox /17,obj_tronco.y-global.tronco_tamanhox/8,"galhos",obj_rama);
 
-instance_create_depth(room_width/2+60,room_height-135,-2,obj_folha);
+instance_create_layer(obj_rama.x+global.rama_tamanhox,obj_rama.y-global.rama_tamanhoy/11,"folhas",obj_folha);
 
-instance_create_depth(room_width/2,room_height-345,-2,obj_cabeca_planta_sol);
+instance_create_layer(room_width/2,room_height-345,"cabeca_devora_sol",obj_cabeca_planta_sol);
 
 
-//
-//folha = function()
-//{
-    //with (obj_folha  ) 
-    //{
-    	//if(indice_folha==0)
-        //{
-           //
-            //
-        //}
-    //}
-    //
-//}
+
+
+
+
+tronco_x = obj_tronco.x;
+tronco_y = obj_tronco.y;
+
+cria_galho = function()
+{
+    
+}

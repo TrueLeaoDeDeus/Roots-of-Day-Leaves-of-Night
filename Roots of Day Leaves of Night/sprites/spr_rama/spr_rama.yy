@@ -23,7 +23,7 @@
   ],
   "name":"spr_rama",
   "nineSlice":null,
-  "origin":9,
+  "origin":3,
   "parent":{
     "name":"mecanicas_plantas",
     "path":"folders/sprites/mecanicas_plantas.yy",
@@ -76,7 +76,7 @@
     "visibleRange":null,
     "volume":1.0,
     "xorigin":0,
-    "yorigin":37,
+    "yorigin":32,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

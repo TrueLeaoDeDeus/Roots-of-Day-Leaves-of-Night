@@ -1,6 +1,6 @@
 
 
-instance_create_depth(room_width/2,room_height-345,-2,obj_coroa_planta_sol);
+instance_create_depth(room_width/2,room_height-345,100,obj_coroa_planta_sol);
 
 instance_create_depth(room_width/2,room_height-260,-2,obj_folha_cabeca_sol);
 
