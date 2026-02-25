@@ -25,6 +25,10 @@ t = 0;
 vel     = (2*pi)/tempo;
 
 
+
+
+
+
 // METODOS.
 
  mexendo = function()

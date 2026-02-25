@@ -1,5 +1,7 @@
 global.spr_lita = [spr_regador,spr_arado];
 
+global.novo_local_folha = false;
+
 global.tempo_movendo_planta = 400;
 
 global.contador_folhas= 0;
@@ -10,3 +12,11 @@ global.tronco_tamanhoy = 0;
 
 global.rama_tamanhox   = 0;
 global.rama_tamanhoy   = 0;
+
+
+
+
+
+// METODOS.
+
+

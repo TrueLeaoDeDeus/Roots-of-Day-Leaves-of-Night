@@ -11,18 +11,15 @@ timer_0 = 0;
 
 // comesa no nivel 0.
 meu_lvl = 0;
-crescer = 0.4;
+crescerx = 0.4;
+crescery = 0.4;
 
-tem = 0;
 
-image_xscale = crescer;
-image_yscale = crescer;
+image_xscale = crescerx;
+image_yscale = crescery;
 
 global.rama_tamanhox   = sprite_width;
 global.rama_tamanhoy   = sprite_height;
-
-
-
 
  mexendo = function()
 {
@@ -79,8 +76,10 @@ tamhanho = function ()
     
 
 
-   image_xscale =lerp(image_xscale ,crescer+(meu_lvl*0.16),0.01);
-   image_yscale =lerp(image_yscale ,crescer+(meu_lvl*0.16),0.01);
+   image_xscale =lerp(image_xscale,crescerx+(meu_lvl*0.16),0.01);
+   image_yscale =lerp(image_yscale ,crescery+(meu_lvl*0.16),0.01);
 
    
 }
+
+

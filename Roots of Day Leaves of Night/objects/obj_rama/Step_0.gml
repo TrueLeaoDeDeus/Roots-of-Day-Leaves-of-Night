@@ -1,2 +1,4 @@
-mexendo();
+contador_recursos();
+//mexendo();
+//tamhanho();
 
