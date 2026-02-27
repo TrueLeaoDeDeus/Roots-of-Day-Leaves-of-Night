@@ -2,9 +2,9 @@
 contador_recursos();
 tamhanho();
 
-mexendo();
+//mexendo();
 
-
+meu_local();
 
 
 

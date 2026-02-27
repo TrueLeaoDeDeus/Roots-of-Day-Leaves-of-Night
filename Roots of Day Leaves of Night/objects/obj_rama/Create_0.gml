@@ -11,7 +11,7 @@ timer_0 = 0;
 
 // comesa no nivel 0.
 meu_lvl = 0;
-crescer = 0.4;
+crescer = 1;
 
 tem = 0;
 
@@ -22,7 +22,11 @@ global.rama_tamanhox   = sprite_width;
 global.rama_tamanhoy   = sprite_height;
 
 
-
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
 
  mexendo = function()
 {
@@ -84,3 +88,4 @@ tamhanho = function ()
 
    
 }
+

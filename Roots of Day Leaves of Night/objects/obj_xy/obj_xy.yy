@@ -1,17 +1,16 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rama",
+  "%Name":"obj_xy",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rama",
+  "name":"obj_xy",
   "overriddenProperties":[],
   "parent":{
-    "name":"obj_mecanicas",
-    "path":"folders/objetos/obj_mecanicas.yy",
+    "name":"objetos",
+    "path":"folders/objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rama",
-    "path":"sprites/spr_rama/spr_rama.yy",
+    "name":"Sprite20",
+    "path":"sprites/Sprite20/Sprite20.yy",
   },
   "spriteMaskId":null,
   "visible":true,

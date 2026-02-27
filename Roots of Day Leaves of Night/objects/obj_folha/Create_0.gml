@@ -18,11 +18,17 @@ sol_coletada = 0;
 indice_folha = global.contador_folhas;
 global.contador_folhas++;
 
+meu_indice = 0;
+
 baseX = y;
 tempo   = global.tempo_movendo_planta;
 amp = 3;
 t = 0;
 vel     = (2*pi)/tempo;
+
+
+
+
 
 
 // METODOS.
@@ -86,3 +92,47 @@ tamhanho = function ()
    
 }
 
+meu_local = function ()
+{
+    
+    var rama_id = instance_nearest(x,y,obj_rama);
+       if (indice_folha==0 and rama_id)   
+    {
+   	    
+   
+       x  = obj_rama.x+rama_id.sprite_width;
+       y  = obj_rama.y+rama_id.sprite_height/32;
+    }
+    if (indice_folha==1 and rama_id)   
+    {
+   	    var rama_id = instance_nearest(x,y,obj_rama);
+        x  = obj_rama.x+rama_id.sprite_width; 
+        y  = obj_rama.y-rama_id.sprite_height/4;
+    }
+    if (indice_folha==2 and rama_id)   
+        {
+       	    var rama_id = instance_nearest(x,y,obj_rama);
+            
+            x  = obj_rama.x+rama_id.sprite_width/2;
+            y  = obj_rama.y-rama_id.sprite_height/3;
+        }
+    if (indice_folha==3 and rama_id)   
+        {
+       	    var rama_id = instance_nearest(x,y,obj_rama);
+            
+            x  = obj_rama.x+rama_id.sprite_width/4;
+            y  = obj_rama.y-rama_id.sprite_height/2;
+        }
+    
+    if (indice_folha==4 and rama_id)   
+        {
+       	    var rama_id = instance_nearest(x,y,obj_rama);
+            
+            x  = obj_rama.x+(rama_id.sprite_width/2)*2;
+            y  = obj_rama.y+rama_id.sprite_height/2;
+        }
+    if (indice_folha ==4)
+    {
+    	indice_folha = 0;
+    }
+}

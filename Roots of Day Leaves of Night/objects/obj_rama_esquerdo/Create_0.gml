@@ -1,19 +1,14 @@
 tempo   = 600;
 valanso = 2;
 vel     = .015;
-
 agua_coletada = 0;
 mineral_coletada = 0;
 sol_coletada = 0;
-
 timer_0 = 0;
-
-
 // comesa no nivel 0.
 meu_lvl = 0;
 crescerx = 0.4;
 crescery = 0.4;
-
 
 image_xscale = crescerx;
 image_yscale = crescery;
@@ -28,7 +23,6 @@ global.rama_tamanhoy   = sprite_height;
     global.rama_tamanhox   = sprite_width;
     global.rama_tamanhoy   = sprite_height;
 }
-
 
 contador_recursos = function ()
 {
@@ -57,7 +51,6 @@ contador_recursos = function ()
 
 }
 
-
 tamhanho = function ()
 {
     // Se eu tiver recursos .
@@ -81,5 +74,3 @@ tamhanho = function ()
 
    
 }
-
-

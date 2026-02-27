@@ -80,13 +80,8 @@ tamhanho = function ()
         
     }
     
-    
-    
    var _minimi = level*cresimento;
-
    image_xscale =lerp(image_xscale ,_minimi,aumento_da_folha);
    image_yscale =lerp(image_yscale ,_minimi,aumento_da_folha);
-
    
 }
-
