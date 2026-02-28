@@ -2,6 +2,7 @@
 image_blend = make_colour_rgb(201,211,106);
 
 //image_blend = make_colour_rgb(79,143,74);
+#region  variaveis
 
 
 aumento_da_folha = 0.06;
@@ -15,22 +16,40 @@ agua_coletada = 0;
 mineral_coletada = 0;
 sol_coletada = 0;
 
-indice_folha = global.contador_folhas;
-global.contador_folhas++;
 
 baseX = y;
 tempo   = global.tempo_movendo_planta;
 amp = 3;
 t = 0;
 vel     = (2*pi)/tempo;
+#endregion
 
+pontos_folha_x = [
+    0.34,
+    0.0,
+    0.15,
+    0.37,
+    0.16
+];
 
+pontos_folha_y = [
+    0.0,
+    0.26,
+    0.68,
+    0.98,
+    0.69
+];
 
+rama_id = instance_nearest(x, y, obj_rama_esquerdo);
 
-
+if (rama_id != noone)
+{
+    indice_folhas = rama_id.folhas_usadas_esquerdo;
+    rama_id.folhas_usadas_esquerdo += 1;
+}
+indice_folhas = indice_folhas mod array_length(pontos_folha_x);
 
 // METODOS.
-
  mexendo = function()
 {
     t+= vel;
@@ -45,25 +64,29 @@ contador_recursos = function ()
     var mineral = instance_place(x, y, obj_minerais);
     var sol = instance_place(x, y, obj_sol);
 
-   if (agua != noone and agua_coletada<level) 
+    if (mouse_check_button_released(mb_left))
     {
-    	instance_destroy(agua);
-        agua_coletada ++;
-        
+    	
+    
+       if (agua != noone and agua_coletada<level) 
+        {
+        	instance_destroy(agua);
+            agua_coletada ++;
+            
+        }
+        else if (mineral != noone and mineral_coletada<level) 
+        {
+        	instance_destroy(mineral);
+            mineral_coletada ++;
+            
+        }
+        else if (sol != noone and sol_coletada <level) 
+        {
+        	instance_destroy(sol);
+            sol_coletada ++;
+            
+        }
     }
-    else if (mineral != noone and mineral_coletada<level) 
-    {
-    	instance_destroy(mineral);
-        mineral_coletada ++;
-        
-    }
-    else if (sol != noone and sol_coletada <level) 
-    {
-    	instance_destroy(sol);
-        sol_coletada ++;
-        
-    }
-
 }
 
 tamhanho = function ()
@@ -80,8 +103,28 @@ tamhanho = function ()
         
     }
     
+    
+    
    var _minimi = level*cresimento;
+
    image_xscale =lerp(image_xscale ,_minimi,aumento_da_folha);
    image_yscale =lerp(image_yscale ,_minimi,aumento_da_folha);
+
    
+}
+
+
+
+meu_local = function ()
+{
+    if (instance_exists(rama_id))
+    {
+        x = rama_id.bbox_left
+          + (rama_id.bbox_right - rama_id.bbox_left)
+          * pontos_folha_x[indice_folhas];
+
+        y = rama_id.bbox_top
+          + (rama_id.bbox_bottom - rama_id.bbox_top)
+          * pontos_folha_y[indice_folhas];
+    }
 }

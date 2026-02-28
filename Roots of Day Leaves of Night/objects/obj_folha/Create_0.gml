@@ -15,10 +15,8 @@ agua_coletada = 0;
 mineral_coletada = 0;
 sol_coletada = 0;
 
-indice_folha = global.contador_folhas;
-global.contador_folhas++;
 
-meu_indice = 0;
+
 
 baseX = y;
 tempo   = global.tempo_movendo_planta;
@@ -26,13 +24,34 @@ amp = 3;
 t = 0;
 vel     = (2*pi)/tempo;
 
+rama_id = instance_nearest(x, y, obj_rama);
 
+if (rama_id != noone)
+{
+    indice_folha = rama_id.folhas_usadas;
+    rama_id.folhas_usadas += 1;
+}
 
+// locasi onde devo colocar a folhas individualmente.
+pontos_folha_x = [
+    0.27,
+    0.5,
+    1.0,
+    0.83,
+    1.0
+    
+];
 
+pontos_folha_y = [
+    0.0,
+    0.18,
+    0.24,
+    0.45,
+    1.0
+];
 
 
 // METODOS.
-
  mexendo = function()
 {
     t+= vel;
@@ -46,26 +65,29 @@ contador_recursos = function ()
     var agua = instance_place(x, y, obj_agua);
     var mineral = instance_place(x, y, obj_minerais);
     var sol = instance_place(x, y, obj_sol);
-
-   if (agua != noone and agua_coletada<level) 
-    {
-    	instance_destroy(agua);
-        agua_coletada ++;
-        
-    }
-    else if (mineral != noone and mineral_coletada<level) 
-    {
-    	instance_destroy(mineral);
-        mineral_coletada ++;
-        
-    }
-    else if (sol != noone and sol_coletada <level) 
-    {
-    	instance_destroy(sol);
-        sol_coletada ++;
-        
-    }
-
+   if (mouse_check_button_released(mb_left))
+   {
+   	
+   
+      if (agua != noone and agua_coletada<level) 
+       {
+       	instance_destroy(agua);
+           agua_coletada ++;
+           
+       }
+       else if (mineral != noone and mineral_coletada<level) 
+       {
+       	instance_destroy(mineral);
+           mineral_coletada ++;
+           
+       }
+       else if (sol != noone and sol_coletada <level) 
+       {
+       	instance_destroy(sol);
+           sol_coletada ++;
+           
+       }
+   }
 }
 
 tamhanho = function ()
@@ -95,44 +117,14 @@ tamhanho = function ()
 meu_local = function ()
 {
     
-    var rama_id = instance_nearest(x,y,obj_rama);
-       if (indice_folha==0 and rama_id)   
+    meu_local = function ()
     {
-   	    
+       if (instance_exists(rama_id))
+       {
+           x = rama_id.bbox_left + (rama_id.bbox_right - rama_id.bbox_left) * pontos_folha_x[indice_folha];
    
-       x  = obj_rama.x+rama_id.sprite_width;
-       y  = obj_rama.y+rama_id.sprite_height/32;
+           y = rama_id.bbox_top + (rama_id.bbox_bottom - rama_id.bbox_top) * pontos_folha_y[indice_folha];
+       }
     }
-    if (indice_folha==1 and rama_id)   
-    {
-   	    var rama_id = instance_nearest(x,y,obj_rama);
-        x  = obj_rama.x+rama_id.sprite_width; 
-        y  = obj_rama.y-rama_id.sprite_height/4;
-    }
-    if (indice_folha==2 and rama_id)   
-        {
-       	    var rama_id = instance_nearest(x,y,obj_rama);
-            
-            x  = obj_rama.x+rama_id.sprite_width/2;
-            y  = obj_rama.y-rama_id.sprite_height/3;
-        }
-    if (indice_folha==3 and rama_id)   
-        {
-       	    var rama_id = instance_nearest(x,y,obj_rama);
-            
-            x  = obj_rama.x+rama_id.sprite_width/4;
-            y  = obj_rama.y-rama_id.sprite_height/2;
-        }
-    
-    if (indice_folha==4 and rama_id)   
-        {
-       	    var rama_id = instance_nearest(x,y,obj_rama);
-            
-            x  = obj_rama.x+(rama_id.sprite_width/2)*2;
-            y  = obj_rama.y+rama_id.sprite_height/2;
-        }
-    if (indice_folha ==4)
-    {
-    	indice_folha = 0;
-    }
+   
 }

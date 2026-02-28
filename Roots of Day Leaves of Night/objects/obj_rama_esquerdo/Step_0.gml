@@ -1,5 +1,5 @@
 contador_recursos();
-mexendo();
+//mexendo();
 
 tamhanho();
 

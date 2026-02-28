@@ -1,20 +1,34 @@
 tempo   = 600;
 valanso = 2;
 vel     = .015;
+
 agua_coletada = 0;
 mineral_coletada = 0;
 sol_coletada = 0;
+
 timer_0 = 0;
+
+folhas_usadas_esquerdo = 0;
+
+instance_create_layer(x,y,"folhas",obj_folha_esquerda);
+instance_create_layer(x,y,"folhas",obj_folha_esquerda);
+instance_create_layer(x,y,"folhas",obj_folha_esquerda);
+instance_create_layer(x,y,"folhas",obj_folha_esquerda);
+instance_create_layer(x,y,"folhas",obj_folha_esquerda);
+
+
 // comesa no nivel 0.
 meu_lvl = 0;
-crescerx = 0.4;
-crescery = 0.4;
+crescer = 1;
 
-image_xscale = crescerx;
-image_yscale = crescery;
+tem = 0;
+
+image_xscale = crescer;
+image_yscale = crescer;
 
 global.rama_tamanhox   = sprite_width;
 global.rama_tamanhoy   = sprite_height;
+
 
  mexendo = function()
 {
@@ -30,24 +44,28 @@ contador_recursos = function ()
     var mineral = instance_place(x, y, obj_minerais);
     var sol = instance_place(x, y, obj_sol);
 
-   if (agua != noone and agua_coletada<meu_lvl+1) 
+    if (mouse_check_button_released(mb_left))
     {
-    	instance_destroy(agua);
-        agua_coletada ++;
-        
+           if (agua != noone and agua_coletada<meu_lvl+1) 
+       {
+       	instance_destroy(agua);
+           agua_coletada ++;
+           
+       }
+       else if (mineral != noone and mineral_coletada<meu_lvl+1) 
+       {
+       	instance_destroy(mineral);
+           mineral_coletada ++;
+           
+       }
+       else if (sol != noone and sol_coletada <meu_lvl+1) 
+       {
+       	instance_destroy(sol);
+           sol_coletada ++;
+       }
+    	
     }
-    else if (mineral != noone and mineral_coletada<meu_lvl+1) 
-    {
-    	instance_destroy(mineral);
-        mineral_coletada ++;
-        
-    }
-    else if (sol != noone and sol_coletada <meu_lvl+1) 
-    {
-    	instance_destroy(sol);
-        sol_coletada ++;
-        
-    }
+   
 
 }
 
@@ -65,12 +83,9 @@ tamhanho = function ()
         global.novo_local_folha = true;
     }
     
-    
-    
 
+   image_xscale =lerp(image_xscale ,crescer+(meu_lvl*0.16),0.01);
+   image_yscale =lerp(image_yscale ,crescer+(meu_lvl*0.16),0.01);
 
-   image_xscale =lerp(image_xscale,crescerx+(meu_lvl*0.16),0.01);
-   image_yscale =lerp(image_yscale ,crescery+(meu_lvl*0.16),0.01);
-
-   
 }
+

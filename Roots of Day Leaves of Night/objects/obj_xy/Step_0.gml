@@ -1,7 +1,8 @@
 
-var rama_id = instance_nearest(x,y,obj_rama);
+// X        0          fim         inicio     
 
-x  = obj_rama.x+(rama_id.sprite_width/2)*2;
-y  = obj_rama.y+rama_id.sprite_height/2;
+var rama_id = instance_nearest(x,y,obj_rama_esquerdo);
+x  = rama_id.bbox_left+(rama_id.bbox_right - rama_id.bbox_left)*0.16  ;
 
-//show_message(rama_id.sprite_height);
+y  = rama_id.bbox_top+(rama_id.bbox_bottom - rama_id.bbox_top) *0.69 ;
+

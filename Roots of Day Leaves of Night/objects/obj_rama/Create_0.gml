@@ -8,6 +8,14 @@ sol_coletada = 0;
 
 timer_0 = 0;
 
+folhas_usadas = 0;
+
+
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
+instance_create_layer(x,y,"folhas",obj_folha);
 
 // comesa no nivel 0.
 meu_lvl = 0;
@@ -22,12 +30,6 @@ global.rama_tamanhox   = sprite_width;
 global.rama_tamanhoy   = sprite_height;
 
 
-instance_create_layer(x,y,"folhas",obj_folha);
-instance_create_layer(x,y,"folhas",obj_folha);
-instance_create_layer(x,y,"folhas",obj_folha);
-instance_create_layer(x,y,"folhas",obj_folha);
-instance_create_layer(x,y,"folhas",obj_folha);
-
  mexendo = function()
 {
     tempo+= vel;
@@ -36,34 +38,36 @@ instance_create_layer(x,y,"folhas",obj_folha);
     global.rama_tamanhoy   = sprite_height;
 }
 
-
 contador_recursos = function ()
 {
     var agua = instance_place(x, y, obj_agua);
     var mineral = instance_place(x, y, obj_minerais);
     var sol = instance_place(x, y, obj_sol);
 
-   if (agua != noone and agua_coletada<meu_lvl+1) 
+    if (mouse_check_button_released(mb_left))
     {
-    	instance_destroy(agua);
-        agua_coletada ++;
-        
+    	
+    
+       if (agua != noone and agua_coletada<meu_lvl+1) 
+        {
+        	instance_destroy(agua);
+            agua_coletada ++;
+            
+        }
+        else if (mineral != noone and mineral_coletada<meu_lvl+1) 
+        {
+        	instance_destroy(mineral);
+            mineral_coletada ++;
+            
+        }
+        else if (sol != noone and sol_coletada <meu_lvl+1) 
+        {
+        	instance_destroy(sol);
+            sol_coletada ++;
+            
+        }
     }
-    else if (mineral != noone and mineral_coletada<meu_lvl+1) 
-    {
-    	instance_destroy(mineral);
-        mineral_coletada ++;
-        
-    }
-    else if (sol != noone and sol_coletada <meu_lvl+1) 
-    {
-    	instance_destroy(sol);
-        sol_coletada ++;
-        
-    }
-
 }
-
 
 tamhanho = function ()
 {

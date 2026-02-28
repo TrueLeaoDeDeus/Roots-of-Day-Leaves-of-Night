@@ -1,11 +1,11 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_rama",
-  "bboxMode":2,
-  "bbox_bottom":41,
+  "bboxMode":0,
+  "bbox_bottom":63,
   "bbox_left":0,
-  "bbox_right":46,
-  "bbox_top":21,
+  "bbox_right":63,
+  "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
@@ -19,6 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"34e257f9-6133-4b7e-93ea-d12c5c1e9d85","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"34e257f9-6133-4b7e-93ea-d12c5c1e9d85","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":false,},
     {"$GMImageLayer":"","%Name":"60d775ad-0d8f-47c0-ae87-33aced7cdcbd","blendMode":0,"displayName":"default","isLocked":false,"name":"60d775ad-0d8f-47c0-ae87-33aced7cdcbd","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_rama",
